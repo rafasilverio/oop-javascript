@@ -1,8 +1,28 @@
-## OOP (Object-oriented Programming)
+# OOP (Object-oriented Programming)
 
-### Introdução
+## Indíce
 
-![](http://octodex.github.com/images/socialite.jpg)
+- [Introdução](#introduction)
+- [Fatos Históricos](#history)
+- [Entendendo os Conceitos](#concepts)
+	- [Classe](#class)
+	- [Padronização de Código e Boas Práticas](#good-pratice)
+	- [Objetos/Instância de Classes](#instance-of-class)
+	- [Mensagem](#message)
+	- [Atributos/Propriedades](#attributes)
+	- [Métodos](#methods)
+	- [Construtor](#constructor)
+	- [Namespaces](#namespaces)
+	- [Herança](#inheritance)
+	- [Herança Múltipla](#multiple-inheritance)
+	- [Encapsulamento/Closure](#closure)
+	- [Polimorfismo](#polymorphism)
+	- [Interfaces](#interfaces)
+- [Artigos e Referências](#references)
+
+## <a name="introduction"></a> Introdução
+
+![](http://f.cl.ly/items/352e3T1l2V3m1S45193V/socialite.jpg)
 
 Também conhecida como OOP (Object-oriented Programming), em português Programação Orientada a Objetos, se resume a arquitetura e modelagem de um sistema com base na definição e criação de objetos que simulam o mais próximo possível do mundo real, dentro do mundo virtual. O que seria essa simulação de realidade dentro de um software? Significa você moldar as características e componentes do seu software baseado em objetos reais que tragam algum significado real para sua aplicação, aonde estes objetos devem ser compostos por atributos e funções e se comunicar através do envio e recebimento de mensagens, assim como ocorre no mundo real.
 
@@ -16,13 +36,13 @@ Neste método de programação toda a mágica ocorre através da criação de um
 
 C++, C♯, .NET, Java, Object Pascal, Objective-C, Python, SuperCollider, Ruby, Self, IO e Smalltalk são exemplos de linguagens de programação orientadas a objetos. Na grande maioria das linguagens citadas, a programação orientada a objetos não é uma regra, mas sim uma possibilidade. Onde você pode tanto programar seguindo OOP, quanto programar no modelo procedural, ou misturar os dois conceitos. Porém, existem algumas linguagens que optaram por ser mais "puras" durante a sua construção, e nelas temos todo o seu core (essência) baseado em OOP, que é o caso de Smalltak, Self e IO.
 
-### Fatos Históricos
+## <a name="history"></a> Fatos Históricos
 
 A programação orientada a objetos demorou um tempo para ser aceita pelas grande empresas de software, fato esse que atrasou um pouco sua disseminação entre as comunidades. Porém, OOP é um termo antigo e já usado a um bom tempo.
 
 — ***Falar sobre smalltalk e simula67***
 
-### Entendendo os Principais Conceitos
+## <a name="concepts"></a> Entendendo os Conceitos
 
 Dê um modo geral, dentro da programação existem diversos conceitos que podem acabar definer os aspectos e características das linguagens, alguns destes conceitos são mais específicos e não são aplicados em todas as linguagens de programação, e outros são mais genéricos.
 
@@ -30,7 +50,7 @@ Para poder exemplificar e começar a falar sobre Orientação a Objetos, é nece
 
 Como estamos abordando Javascript como principal linguagem deste artigos, vamos usufruir de um exemplo real criado com Javascript para poder exemplificar cada um desses conceitos.
 
-#### Classe:
+### <a name="class"></a> Classe:
 
 No começo pode ser difícil entender o conceito de classe e objeto, porém é imprescindível que saibamos a diferença entre estes dois itens, e para explicar de uma maneira eficiente é preciso se fazer comparação em relação à criação de classes e objetos. Por isso deve-se entender bem o conceito de objeto, atributos, funções e mensagens dentro de uma classe.
 
@@ -59,7 +79,7 @@ A partir deste código temos um classe Cars criada. Definimos dois atributos par
 
 ***Observações:*** Em Javascript não existe uma definição oficial para a criação de classes como em outras linguagens como Ruby e Python, por exemplo. Porém, existem algumas maneiras que podemos usufruir para fazer isto. Neste exemplo estou usando as chamadas Funções Construtoras, que é um dos métodos que temos disponíveis para criar uma classe. Mais para frente abordaremos quais técnicas podemos usar para a criação de classes em javascript e quais as vantagens e desvantagens de cada uma.
 
-##### Padronização e Boas Práticas na escrita de Códigos:
+### <a name="good-pratice"></a> Padronização de Código e Boas Práticas
 
 Fugindo rapidamente dos conceitos atrelados à programação orientada a objetos, falaremos um pouco sobre padrões de código, que são essenciais para facilitar a manutenção do seu código e torná-lo mais legível.
 
@@ -71,13 +91,13 @@ Veremos agora um pouco sobre um padrão de escrita de código muito conhecido, q
 
 Porém, não é comum escrever frases usando CamelCase, mas sim palavras compostas. Também é importante citar que existem variações dentro desta técnica como, por exemplo, ***lowerCamelCase***. O lowerCamelCase é muito parecido com o CamelCase padrão, porém define que a primeira letra da primeira palavra deve ser minúscula. É interessante observar que esta é uma técnica muito difundida e usada no Javascript.
 
-Ok, e aonde aplicamos a técnica de CamelCase, lowerCamelCase e dentre outras? Para a criação de classes e objetos, algo muito citado nas comunidades de programação, é que o melhor padrão para se usar é o CamelCase. O argumento é que em todo o lugar de um código que houver algo escrito em CamelCase, fica explícito que aquilo se trata de uma instância de uma classe. 
+Ok, e aonde aplicamos a técnica de CamelCase, lowerCamelCase e dentre outras? Para a criação de classes e objetos, algo muito citado nas comunidades de programação, é que o melhor padrão para se usar é o CamelCase. O argumento é que em todo o lugar de um código que houver algo escrito em CamelCase, fica explícito que aquilo se trata de uma instância de uma classe.
 
 Já para a criação de método e atributos, ocorre uma variação no padrão de escrita de acordo com a linguagem que se está programando. Por exemplo, em Ruby, um padrão comum é separar as palavras por "_" (underline), já em Javascript o padrão mais usado é o lowerCamelCase.
 
 Como dito anteriormente, a maneira com que você trabalha seus padrões vai depender de muitos fatores, porém, é essencial que se adaptar à algum deles e mater uma base firme para escrita de código.
 
-#### Objeto/Instância de Classe:
+### <a name="instance-of-class"></a> Objeto/Instância de Classe:
 
 Partindo de uma abordagem mais real, um objeto pode ser tratado como algo vivo e já definido dentro de uma aplicação. Ele não é apenas uma abstração ou conceito classificativo, o objeto, diferente da classe, já possui uma lista atributos definidos e pode usufruir de todos os métodos públicos de sua classe, além de poder se comunicar com outros objetos, seja da mesma classe ou de outras.
 
@@ -85,7 +105,7 @@ Com a criação da classe "Cars", fica mais fácil entender o conceito de objeto
 
 Para instanciar uma classe, ou criar um objeto, usufruímos de um construtor. Em breve será abordardo o que são os construtores e como devemos usá-los em Javascript.
 
-#### Mensagem:	
+### <a name="message"></a> Mensagem:
 
 Mensagens definem a maneira com que nos comunicamos com um objeto, ou basicamente, a invocão de um metódo deste objeto. Veja um exemplo simples de invocação de método.
 
@@ -107,7 +127,7 @@ john.car.turnOn(); // ativa o metódo do objeto herdado através da instancia da
 
 Neste exemplo, criamos o objeto John e definimos que seu atributo "car" será outra instância de objeto. Assim podemos enviar uma mensagem através de John para ligar seu carro fusca, usufruindo do método "turn on".
 
-#### Atributos/Propriedades:	
+### <a name="attributes"></a> Atributos/Propriedades:
 
 Os atributos são valores únicos e formam a estrutura de dados de uma classe. Dentro de um objeto, são denominadoscomo propriedades do objeto. Cada atributo da classe, ou propriedade do objeto possui um valor, este por sua vez, pode tomar a forma de uma variável ou uma função. Quando função torna-se um método.
 
@@ -130,7 +150,7 @@ Exemplo de atributo estático:
 function Cars() {
 	this.wheels = 4;
 };
-``` 
+```
 
 Exemplo de atributo dinâmico:
 
@@ -146,7 +166,7 @@ Já no segundo exemplo, definimos o valor de wheels apenas quando instanciamos u
 
 ***OBS:*** Em linguagens não tipadas, não precisamos definir o tipo do atributo, pois o tipo do atributo é determinado quando definido o valor ao criar o objeto.
 
-#### Métodos:
+### <a name="methods"></a> Métodos:
 
 Os métodos são definições que executam determinado procedimento ou função e ajudam à definir as habilidades que a classe terá. É comum que um método receba argumentos, ou seja, parâmetros para que o mesmo possa ser executado de uma forma mais genérica usufruindo de uma lógica dependente do parâmetro.
 
@@ -164,7 +184,7 @@ Cars.prototype.turnOn = function() {
 };
 ```
 
-#### Construtor:
+### <a name="constructor"></a> Construtor:
 
 Construtores são a maneira com que instanciamos uma classe, ou seja, criamos um objeto. Quando definimos uma classe especificamos os atributos que esta contém e quais são os tipos deste atributos. Por exemplo, na classe Carros temos um atributo modelo que é do tipo String e um atributo ano de fabricação que é do tipo Number. Em linguagens não tipadas, não é preciso especificar o tipo do atributo.
 
@@ -178,19 +198,19 @@ fusca = Carro.new('Fusca', 1979)
 
 A partir de um construtor acabamos de criar nosso objeto Fusca, que é uma instância da classe Carros, passando os parâmetros "nome" do tipo String, e "anoDeFabricacao" do tipo Number.
 
-#### Namespaces:	
+### <a name="namespaces"></a> Namespaces:
 
-#### Herança:
+### <a name="inheritance"></a> Herança:
 
-#### Herança Múltipla:
+### <a name="multiple-inheritance"></a> Herança Múltipla:
 
-#### Encapsulamento/Closure:
+### <a name="closure"></a> Encapsulamento/Closure:
 
-#### Polimorfismo:
+### <a name="polymorphism"></a> Polimorfismo:
 
-#### Interfaces:
+### <a name="interfaces"></a> Interfaces:
 
-### Artigos e Referências
+# <a name="references"></a> Artigos e Referências
 
 - http://pt.wikipedia.org/wiki/Orienta%C3%A7%C3%A3o_a_objetos
 - http://www.hardware.com.br/artigos/programacao-orientada-objetos/
