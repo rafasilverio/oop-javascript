@@ -40,16 +40,19 @@ Para ficar mais fácil de entender, vamos criar um exemplo criando uma classe Ca
 
 Este é o exemplo de como poderíamos criar esta classe em Javascript
 
-```
+```javascript
 function Cars(model, manufacturingDate) {
 	this.model = model;
-	this.manufacturingDate = manufacturingDate;};
+	this.manufacturingDate = manufacturingDate;
+};
 
 Cars.prototype.turnOn = function() {
-	console.log('car is on!')};
+	console.log('car is on!')
+};
 
 Cars.prototype.turnOff = function() {
-	console.log('car is off!')};
+	console.log('car is off!')
+};
 ```
 
 A partir deste código temos um classe Cars criada. Definimos dois atributos para a classe: "model" e "manufacturing date", também definimos dois métodos: um método chamado "turnOn" e outro "turnOff".
@@ -86,7 +89,7 @@ Para instanciar uma classe, ou criar um objeto, usufruímos de um construtor. Em
 
 Mensagens definem a maneira com que nos comunicamos com um objeto, ou basicamente, a invocão de um metódo deste objeto. Veja um exemplo simples de invocação de método.
 
-```
+```javascript
 var fusca = new Cars('Fusca', 1979);
 
 fusca.turnOn();
@@ -94,7 +97,7 @@ fusca.turnOn();
 
 Podemos também nos comunicar enviando mensagens entre objetos. O objeto Fusca, que foi citado anteriormente, poderia  receber uma mensagem de um outro objeto da classe "People" invocando seu método "turn on". Esta mensagem faria com que o método "turn on" do objeto Fusca fosse ativado no contexto executado. Veja um exemplo:
 
-```
+```javascript
 var fusca = new Cars('Fusca', 1979) // instancia um objeto através da classe "Cars"
 var john = new People('John'); // instancia um objeto através da classe "People"
 
@@ -114,7 +117,7 @@ Dentro da classe "Cars" temos, por exemplo, o atributo "model", que pode ser do 
 
 Em Javascript, este é o trecho do código da classe "Cars" onde definimos seus atributos:
 
-```
+```javascript
 this.model = model;
 this.manufacturingDate = manufacturingDate;
 ```
@@ -123,16 +126,18 @@ Podemos usufruir de dois tipos de atributos, os estáticos e dinâmicos. Atribut
 
 Exemplo de atributo estático:
 
-```
+```javascript
 function Cars() {
-	this.wheels = 4;};
+	this.wheels = 4;
+};
 ``` 
 
 Exemplo de atributo dinâmico:
 
-```
+```javascript
 function Cars(wheels) {
-	this.wheels = wheels;};
+	this.wheels = wheels;
+};
 ```
 
 No primeiro exemplo, estamos definindo que o atributo "wheels" da classe "Cars" é um valor estático, ou seja, já está definido dentro do seu escopo, e independente da instancia de objeto que fizermos, seu valor será 4.
@@ -153,9 +158,10 @@ Uma dica importante para a criação de métodos é em relação ao tempo verbal
 
 E este é o trecho de código da classe Carros que usamos para definir seu método "acelerar":
 
-```
+```javascript
 Cars.prototype.turnOn = function() {
-	console.log('car is on!')};
+	console.log('car is on!')
+};
 ```
 
 #### Construtor:
@@ -166,7 +172,7 @@ Porém, ao especificar os atributos de uma classe você não está criando de fa
 
 Para instanciarmos a classe Carros com um construtor em Ruby, usaríamos um código como esse:
 
-```
+```javascript
 fusca = Carro.new('Fusca', 1979)
 ```
 
